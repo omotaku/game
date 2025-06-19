@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.isGuardBroken = false;
                 this.guardEffect.style.display = 'none';
                 this.guardEffect.classList.remove('guard-break');
-            }, 2000); // 2秒間硬直
+            });
         }
         handleObstacleCollision() { const platforms = Game.gameObjects.filter(obj => obj.isPlatform); let landedOnPlatform = false; platforms.forEach(obs => { if (obs.type === 'disappearing-platform' && obs.state !== 'visible' && obs.state !== 'fading') return; if (!Game.checkRectCollision(this, obs)) return; const prevBottom = this.prevY + this.height; if (this.vy >= 0 && prevBottom <= obs.y) { this.y = obs.y - this.height; this.vy = 0; landedOnPlatform = true; if (obs.type === 'moving-platform') { this.x += obs.moveX; this.y += obs.moveY; } if (obs.type === 'disappearing-platform') { obs.onPlayerStep(); } } else if (this.vy < 0 && this.prevY >= obs.y + obs.height) { this.y = obs.y + obs.height; this.vy = 0; } else if (this.x + this.width > obs.x && this.prevX + this.width <= obs.x) { this.x = obs.x - this.width; this.vx_inertia = 0; } else if (this.x < obs.x + obs.width && this.prevX >= obs.x + obs.width) { this.x = obs.x + obs.width; this.vx_inertia = 0; } }); this.onGround = landedOnPlatform; this.prevX = this.x; }
         // ▼▼▼ 変更: ガードブレイクのトリガーを追加 ▼▼▼
