@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクションゲーム</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-wrapper">
+        <div id="game-container">
+            <div id="parallax-bg-far"></div>
+            <div id="parallax-bg-near"></div>
+
+            <div id="world">
+                <div id="player">
+                    <div id="player-ride-ofuda"></div>
+                    <!-- ▼▼▼ 新規追加: ガードエフェクト用 ▼▼▼ -->
+                    <div id="player-guard-effect"></div>
+                </div>
+            </div>
+
+            <div id="ui-overlay">
+                <div class="status-bar">
+                    <span class="label">HP</span>
+                    <div class="gauge-background"><div id="hp-bar" class="gauge-fill"></div></div>
+                </div>
+                <div class="status-bar">
+                    <span class="label">祭</span>
+                    <div class="gauge-background"><div id="gauge-bar" class="gauge-fill"></div></div>
+                </div>
+                <div class="status-bar">
+                    <span class="label">飛翔</span>
+                    <div id="ofuda-ride-indicator" class="indicator-ready"></div>
+                </div>
+                <div class="status-bar">
+                    <span class="label">SCORE</span>
+                    <div id="score-display" class="score-text">0</div>
+                </div>
+            </div>
+
+            <div id="game-over-screen" class="hidden">
+                <h2 class="game-over-title">GAME OVER</h2>
+                <button id="restart-button">もう一度！</button>
+            </div>
+            
+            <div id="game-clear-screen" class="hidden">
+                <h2 class="game-clear-title">GAME CLEAR</h2>
+                <p class="clear-message">おめでとう！</p>
+                <button id="restart-button-clear">もう一度！</button>
+            </div>
+            
+            <div class="controls-info">
+                <!-- ▼▼▼ 変更: 操作説明を更新 ▼▼▼ -->
+                <p><strong>KB:</strong> ← →:移動 / [SPACE]:ジャンプ / [X]:お札 / [Z]:飛翔 / [C]:必殺技 / [A]:ガード</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
