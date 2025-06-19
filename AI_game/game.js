@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.type = 'player';
             this.width = 32; this.height = 64; this.maxHp = 100; this.moveSpeed = 6; this.airMoveSpeed = 2.5;
             this.rideEffect = document.getElementById('player-ride-ofuda');
-            this.rideDuration = 800; this.rideCooldownTime = 30000; this.rideSpeed = 7; this.rideLift = 1.5;
+            this.rideDuration = 800; this.rideCooldownTime = 15000; this.rideSpeed = 7; this.rideLift = 1.5;
             this.vx_inertia = 0; this.chargeThreshold = 300; this.isDamagedByZone = false;
             this.guardEffect = document.getElementById('player-guard-effect');
             this.isGuarding = false;
