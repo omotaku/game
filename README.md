@@ -1,5 +1,5 @@
 <P>AIに手伝ってもらったゲーム</p>
-AI_gameのindex.htmlを開いてゲームスタート<br>
+AI_gameのstage_select.htmlを開いてゲームスタート<br>
 KB: ← →:移動 / [SPACE]:ジャンプ / [X]:攻撃 / [Z]:飛翔 / [C]:必殺技 / [A]:ガード<br>
 <br>
 ジャンプ⋯長押しで高くジャンプ<br>
